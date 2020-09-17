@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Mobile</title>
+    <link href="../images/avd/logoIcon.jpg" rel="shortcut icon"/>
+    <link rel="stylesheet" href="css/styleBuy.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/buy.js"></script>
+</head>
+<body>
+    
+    <div style="height: 40px;">
+        <img src="../images/avd/qc.jpg" alt="qc" width="100%" height="100%">
+    </div>
+    <div class="main">
+        <nav>
+            <ul>
+                <li><a class="logo" href="../../trangchu.shop.html"><img title="Về trang chủ" src="../images/avd/logoVT.jpg" alt="VT shop"></a></li>
+                <li>
+                    <select style="height: 25px; margin-top: 20px ;  border-top-left-radius: 5px ;">
+                        <option>Tp Hồ Chí Minh</option>
+                        <option>Hà Nội</option>
+                        <option>Đà Nẵng</option>
+                        <option>Quảng Nam</option>
+                        <option>Đồng Nai</option>
+                        <option>Bình Dương</option>
+                        <option>Hải Phòng</option>
+                        <option>Bình Định</option>
+                        <option>Cần Thơ</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="text" placeholder="Nhập từ khóa tìm kiếm" style="width:190px; height: 20px; margin-top: 20px ; border-top-right-radius: 7px;">
+                </li>
+                <li class="submenu">
+                    <a href="../../trangchu.shop.html#phone"><i class="fa fa-mobile" style="font-size: 30px;"></i> Điện thoại</a>
+                    <ul class="menu">
+                        <li><a href="../../trangchu.shop.html#phone" >IPHONE</a></li>
+                        <li><a href="../../trangchu.shop.html#phone">SAMSUNG</a></li>
+                        <li><a href="../../trangchu.shop.html#phone">OPPO</a></li>
+                        <li><a href="../../trangchu.shop.html#phone">XIAOMI</a></li>
+                        <li><a href="../../trangchu.shop.html#phone">VIVO</a></li>
+                        <li><a href="../../trangchu.shop.html#phone">Khác...</a></li>
+                    </ul>
+                </li>
+
+                <li class="submenu">
+                    <a href="../../trangchu.shop.html#laptop"><i class="fa fa-laptop" style="font-size: 30px;"></i> Laptop</a>
+                    <ul class="menu">
+                        <li><a href="../../trangchu.shop.html#laptop">MACBOOK</a></li>
+                        <li><a href="../../trangchu.shop.html#laptop">DELL</a></li>
+                        <li><a href="../../trangchu.shop.html#laptop">ASUS</a></li>
+                        <li><a href="../../trangchu.shop.html#laptop">HP</a></li>
+                        <li><a href="../../trangchu.shop.html#laptop">Khác...</a></li>
+                    </ul>
+                </li>
+
+                <li class="submenu">
+                    <a href="../../trangchu.shop.html#acc"><i class="fa fa-headphones" style="font-size: 30px;"></i> Phụ kiện</a>
+                    <ul class="menu">
+                        <li><a href="../../trangchu.shop.html#acc">Sạc</a></li>
+                        <li><a href="../../trangchu.shop.html#acc">Tai nghe</a></li>
+                        <li><a href="../../trangchu.shop.html#acc">Loa</a></li>
+                        <li><a href="../../trangchu.shop.html#acc">Khác...</a></li>
+                    </ul>
+                </li>
+                <div class="shop">
+                  <a href="../giohang.html"><i class="fa fa-shopping-cart " style="font-size: 28px;"></i>Giỏ hàng</a>
+                </div>
+            </ul>
+        </nav> 
+        <hr  color="black" style="margin:0">
+    </div>
+    <div class="buying">
+        <div class="header">
+            <div>Thông tin thanh toán</div>
+            <div><a href="../../trangchu.shop.html">Tiếp tục mua hàng</a></div>
+        </div>
+        <hr size="1px" color="#dedede">
+        <div class="buyProduct">
+            <div class="show">
+                <img src="../images/phone/iPhone/show3-iPhone-images.jpg" alt="" width="100%">
+            </div>
+            <div>
+                <p>iPhone 11 Pro Max 64GB Chính hãng</p>
+                <p>- Trả góp 0% trên giá bán lẻ </p>
+                <p>- Khuyến mãi trị giá 3.500.00 VNĐ <a href="../phone-iPhone-11-Pro-Max-256GB.html">(click xem chi tiết)</a></p>
+                <p>- Đăng kí để giảm thêm 5% từ VT Shop</p>
+                <p>- Phụ kiện mua kèm giảm 20% (không áp dụng phụ kiện hãng, không áp dụng đồng thời KM khác)</p>
+                <p style="color: red;">*Mọi khuyến mãi chỉ áp dụng sau khi bạn thanh toán</p>
+                <div> 
+                    <span>Màu sắc:</span>
+                    <div class="color">
+                        <input class="cp" data="3" onclick="changeColor(this)" type="button" value="Đen" >
+                        <input class="cp" data="2" onclick="changeColor(this)" type="button" value="Hồng" >
+                        <input class="cp" data="1" onclick="changeColor(this)" type="button" value="Đen xanh" >
+                        <input class="cp" data="4" onclick="changeColor(this)" type="button" value="Trắng" >
+                    </div><br>
+                    <span>Số lượng</span>
+                    <div class="sl">
+                        <div onclick="minus()"><i class="fa fa-minus "></i></div>
+                        <input id="number" onkeydown="numberMoney()" onmouseout="numberMoney()" type="text" value="1">
+                        <div onclick="plus()"><i class="fa fa-plus " style="color: #288ad6"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pay">
+            <section class="money">
+                <div>Tiền:</div>
+                <div >37.990.000 đ</div>
+            </section>
+            <section class="numberPro">
+                <div>Số lượng:</div>
+                <div id="numberPro">x 1</div>
+            </section>
+            <section class="lastMoney">
+                <div>Cần thanh toán:</div>
+                <div id="valueMoney">37.990.000 đ</div>
+            </section><br>
+        </div>
+        <div class="yourself">
+            <h4>Thông tin khách hàng</h4>
+            <input type="radio" checked="checked" name="gt"/>Nam
+            <input type="radio" name="gt" style="margin-bottom:15px"/>Nữ   <br>
+            <input onclick="hideError(this)" id="name" type="text" placeholder="Họ và tên(*)"/>
+            <input onclick="hideError(this)" id="numberPhone" type="text" placeholder="Điện thoại(*)"/><br>
+            <input onclick="hideError(this)" id="email" type="text" placeholder="Email(*)"/><br>
+            <select id="option" onclick="hideError(this)">
+                <option selected="selected" disabled="disabled">Chọn tỉnh thành</option>
+                <option>An Giang</option>
+                <option>Bà Rịa - Vũng Tàu</option>
+                <option>Bắc Giang</option>
+                <option>Bắc Kạn</option>
+                <option>Bạc Liêu</option>
+                <option>Bắc Ninh</option>
+                <option>Bắc Ninh</option>
+                <option>Bến Tre</option>
+                <option>Bình Định</option>
+                <option>Bình Dương</option>
+                <option>Bình Phước</option>
+                <option>Bình Thuận</option>
+                <option>Cà Mau</option>
+                <option>Cao Bằng</option>
+                <option>Cần Thơ</option>
+                <option>Đà Nẵng</option>
+                <option>Đắk Lắk</option>
+                <option>Đắk Nông</option>
+                <option>Điện Biên</option>
+                <option>Đồng Nai</option>
+                <option>Đồng Tháp</option>
+                <option>Gia Lai</option>
+                <option>Hà Giang</option>
+                <option>Hà Nam</option>
+                <option>Hà Nội</option>
+                <option>Hà Tĩnh</option>
+                <option>Hải Dương</option>
+                <option>Hải Phòng</option>
+                <option>Hậu Giang</option>
+                <option>Hòa Bình</option>
+                <option>Hồ Chí Minh</option>
+                <option>Hưng Yên</option>
+                <option>Khánh Hòa</option>
+                <option>Kiên Giang</option>
+                <option>Kon Tum</option>
+                <option>Lai Châu</option>
+                <option>Lâm Đồng</option>
+                <option>Lạng Sơn</option>
+                <option>Lào Cai</option>
+                <option>Long An</option>
+                <option>Nam Định</option>
+                <option>Nghệ An</option>
+                <option>Ninh Bình</option>
+                <option>Ninh Thuận</option>
+                <option>Phú Thọ</option>
+                <option>Quảng Bình</option>
+                <option>Quảng Nam</option>
+                <option>Quảng Ngãi</option>
+                <option>Quảng Ninh</option>
+                <option>Quảng Trị</option>
+                <option>Sóc Trăng</option>
+                <option>Sơn La</option>
+                <option>Tây Ninh</option>
+                <option>Thái Bình</option>
+                <option>Thái Nguyên</option>
+                <option>Thanh Hóa</option>
+                <option>Thừa Thiên Huế</option>
+                <option>Tiền Giang</option>
+                <option>Trà Vinh</option>
+                <option>Tuyên Quang</option>
+                <option>Vĩnh Long</option>
+                <option>Vĩnh Phúc</option>
+                <option>Yên Bái</option>
+                <option>Phú Yên</option>
+            </select>
+            <input onclick="hideError(this)" id="add" type="text" placeholder="Số nhà, tên đường, phường/xã, quận/huyện"/>
+            <p id="error" style="color: red; font-size: 13px;display: none; "><i class="fa fa-exclamation-triangle" style="font-size: 18px;"></i> Vui lòng nhập thông tin đầy đủ và chính xác</p>
+            <h4>Hình thức thanh toán</h4>
+            <div><i onclick="typeSell(this)" class="fa fa-check-square" style="color:#298ad8"></i><span>Thanh toán bằng tiền mặt khi nhận hàng</span></div>
+            <div><i onclick="typeSell(this)" class="fa fa-check-square"></i><span>Thanh toán qua ngân hàng</span></div>
+            <div><i onclick="typeSell(this)" class="fa fa-check-square"></i><span>Trả góp</span></div>
+            <input id="request" type="text" placeholder="Yêu cầu khác nếu có"/> <br>
+            <p style="color: red; font-size: 13px;">* Bắt buộc</p>
+            <div id="dh"><input  onclick="buy()" type="button" value="ĐẶT HÀNG"/></div>
+        </div>
+    </div>
+    <div id="ok">
+        Đặt hàng thành công
+    </div>
+    <!-- back to top-->
+    <div title="Back to top" id="back-to-top" onclick="topFunction()"><i class="fa fa-angle-double-up "></i></div>
+    <!-- footer-->
+    <footer>
+        <section class="footer">
+            <div width="35%">
+                <p>THÔNG TIN LIÊN HỆ</p>
+                <hr size="1px" color="white" >
+                <span>Tổng đài liên hệ: <span style="font-size: 18px; color:rgb(253, 80, 17);"> 0855.100.001</span></span><br>
+                <span>Gọi Bảo hành - Sửa chữa: <span style="font-size: 18px; color:rgb(253, 80, 17);"> 1900.63.69.21</span></span><br>
+                <span>Đặt mua hàng:  <span style="font-size: 18px; color:rgb(253, 80, 17);">1800 1760</span><span style="font-size: 13px;"> (7:00-22:00)</span></span><br>
+                <span>Địa chỉ: 371, Nguyễn Kiệm, Q. Gò Vấp, Tp. Hồ Chí Minh</span><br>
+                <span>Gmail: truong977@gmail.com</span>
+            </div>
+            <div width="35%">
+                <p>THỜI GIAN LÀM VIỆC</p>
+                <hr size="1px" color="white" >
+                <span>Thời gian: 7:00-22:00</span><br> 
+                <span   >Làm việc từ thứ 2 đến chủ nhật</span><br><br>
+                <span class="las">Giới thiệu về VT Shop</span><br>
+                <span class="las">Chính sách bảo hành</span><br>
+                <span class="las">Qui định đổi trả</span><br>
+                <span class="las">Tuyển dụng</span>
+            </div>
+            <div width="30%">
+                <p>HÌNH THỨC GIAO HÀNG</p>
+                <hr size="1px" color="white" >
+                <span>Giao hàng miễn phí trên toàn quốc </span><br>
+                <img src="../images/avd/logoVT.jpg" alt="VT" width="72%"> <br>
+                <img src="../../images/avd/dichvuGH.png" alt="giao hàng" width="20%">
+                <img src="../../images/avd/dichvuGH1.png" alt="giao hàng" width="51%" height="20%" style="margin-top:5px">
+
+            </div>
+        </section>
+    </footer>   
+</body>
+</html>

@@ -1,0 +1,1004 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: whitesmoke;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/*CSS DIV MAIN*/
+
+.main{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #f8f0f0;
+}
+
+/* CSS NAV*/
+
+nav{
+    background-image:linear-gradient(0deg,#00483e,#087565);
+    width: 100%;
+}
+
+.logo{
+    padding: 0;
+    width: 190px;
+    height: 25px;
+    margin: 0;
+}
+
+nav > ul > li > a > img{
+    width: 100%;
+    height: 63px;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav  ul > li > a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color:white;
+    width: 140px;
+}
+
+nav ul > li > a:hover{
+    background-image: linear-gradient(0deg, black, rgb(94, 94, 94));
+    color: white;
+    text-decoration: none;
+    border: 1px solid;
+    border-top-color: red;
+    border-right-color: black ;
+    border-bottom-color: red;
+    border-left-color: black;
+    border-radius: 2px;
+}
+
+.menu{
+    display: none;
+    position: absolute;
+    background-image:linear-gradient(0deg,#00483eef,#087565ea);
+    z-index: 1000;
+}
+
+.submenu:hover .menu{
+    display: block;
+}
+
+/* giỏ hàng*/
+.shop{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #087565ea;
+    width: 120px;
+    margin-left:auto;
+    text-align: center;
+    padding-top: 15px;
+}
+.shop > a{
+    text-decoration: none;
+    color: orange;
+    text-align: center;
+    padding: 15px 10px ;
+}
+
+.shop:hover{
+    background-color: rgb(70, 69, 69);
+    border: 1px solid red;
+}
+.shop > a:hover{
+    text-decoration: none;
+    color: orange;
+}
+/*CSS QC*/
+
+div.img{
+    width: 100%; 
+    margin-top: 10px;
+    display: flex;
+} 
+
+.avdHead{
+    width: 40%;
+    margin-left: 5px;
+}
+
+.avdHead >img{
+    width: 100%;
+    margin-top: 6px;
+}
+
+.img > div.carousel{
+    width: 60%;
+    z-index: 1;
+}
+
+.img .carousel-control-prev{
+    background-color: rgba(110, 110, 110, 0.37);
+    width: 50px;
+    height: 50px;
+    margin: auto ;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.img .carousel-control-prev:hover{
+    background-color: rgb(46, 45, 45);
+}
+
+.img .carousel-control-next{
+    background-color: rgba(110, 110, 110, 0.37);
+    width: 50px;
+    height: 50px;
+    margin: auto ;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.img .carousel-control-next:hover{
+    background-color: rgb(46, 45, 45);
+}
+
+/* CSS SHARE*/
+.sharing{
+    list-style-type: none;
+}
+
+.sharing > li{
+    position: fixed;
+    background-color: rgb(110, 200, 241);
+    padding: 2px;
+    left: -180px;
+    min-width: 220px;
+    transition: left .5s;
+    z-index: 900;
+    display: flex;
+}
+
+.sharing > li:hover{
+    left: 0;
+}
+
+.sharing > li > a{
+    text-decoration:none;
+    color: rgb(109, 45, 45);
+    padding: 10px 10px 10px 30px;
+}
+
+.sharing > li > img{
+    margin-left: auto;
+    width: 40px
+}
+
+.sharing > li:nth-child(1){
+    top: 200px;
+}
+
+.sharing > li:nth-child(2){
+    top: 247px;
+}
+
+.sharing > li:nth-child(3){
+    top: 294px;
+}
+
+/*CSS MAIN*/
+
+.main > p{
+    margin-left: 20px;
+    height: 30px;
+    font-size: 35px;
+    color: black;
+    text-shadow: 4px 3px 2px rgb(173, 172, 172)
+}
+
+section.sub{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+section.sub  img{
+    margin: 0 auto;
+}
+
+section.sub > div{
+    width: 24.8%;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    margin: 0.1%;
+    cursor: pointer;
+}
+
+section.sub > p{
+    background-color:white; 
+    width:100%; 
+    height: 70px;
+}
+
+section.sub > p > input[type=button]{
+    margin-top: 15px;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: #288ad6;
+    font-size: 13px;
+    border: 1px solid #288ad6;
+    border-radius: 3px;
+}
+
+section.sub > p > input[type=button]:hover{
+    background-color: #288ad6;
+    color: white;
+}
+
+section.sub > div > a > h4{
+    animation: changeColor 1s infinite;
+    font-size: 18px;
+    padding-top: 28px;
+}
+
+@keyframes changeColor{
+    from{
+        color: yellow;
+    }
+    to{
+        color: red;
+    }
+}
+
+section.sub > div > a > p{
+    height: 22px;
+    font-size: 18px;
+}
+
+section.sub > div > a > p > span{
+    height: 13px;
+    font-size: 13px;
+    color: red;
+}
+
+section.sub > div > a > img:hover{
+    width: 100%;
+    transform: scale(1.1);
+}
+
+section.sub > div > a > img{
+    transition: transform .5s;
+    width: 100%;
+}
+
+section.sub > div > a{
+    text-decoration: none;
+    color: rgb(80, 25, 151);
+    width: 100%;
+}
+
+.sub > div:hover{
+    border: #858585 solid 2px;
+    border-radius: 5px;
+}
+
+
+/* xem thêm*/
+.more, .more1, .more2{
+    display: none;
+}
+
+/* CSS sắp xếp*/
+#increase, #reduction{
+    display: none;
+}
+.phoneType, .option{
+    display: flex;
+    background-color: white;
+}
+.phoneType >ul, .option > ul{
+    list-style-type: none;
+    display: flex;
+}
+.option > ul > li{
+    width: 130px;
+    color: #288ad6;
+    border: 1px solid rgb(45, 45, 253);
+    font-size: 13px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.option > ul > li.fist{
+    background-color: #288ad6;
+    color: white;
+}
+
+.phoneType > ul > li{
+    width: 100px;
+    color: #288ad6;
+    border: 1px solid rgb(45, 45, 253);
+    font-size: 13px;
+    padding: 5px;
+    margin: -15px 0 0 5px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.phoneType > ul > li:first-child{
+    margin-left: 135px;
+}
+/* sắp xếp*/
+#iphone, #samsung, #oppo, #vivo, #xiaomi, #otherPhone{
+    display: none;
+}
+
+/* CSS back to top*/           /*chung cho tất cả file html*/
+#back-to-top{
+    position: fixed;
+    display: none;
+    top: 90%;
+    left: 97%;
+    font-size: 26px;
+    width: 35px;
+    background-color: rgba(223, 223, 223, 0.411);
+    color: #333;
+    cursor: pointer;
+    border: 3px solid rgba(0, 0, 0, 0.514);
+    border-radius: 5px;
+    padding-top: 0px;
+    transition: 0.5s;
+    text-align: center;
+}
+#back-to-top:hover{
+    background-color: black;
+    color: white;
+}
+
+/* đăng kí nhận khuyến mãi*/
+.footer-sub{
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
+
+.footer-sub > h5{
+    margin-top: 50px;
+}
+
+.footer-sub > p{
+    font-size: 14px;
+    color: #999;
+    margin-top: -10px;
+}
+.footer-sub input[type=text]{
+    width: 350px;
+    border-radius: 15px;
+    border: 1px solid #c1c1c1;
+}
+
+.footer-sub input[type=button]{
+    width: 100px;
+    border-radius: 15px;
+    background-color: #2f85cb;
+    color: white;
+    border: 1px solid #2f85cb;
+}
+/*CSS FOOTER*/
+
+footer{
+    background-image:linear-gradient(0deg,#00483e,#087565);
+    width: 100%;
+    height: 300px;
+}
+
+.footer{
+    display: flex;
+    color: white;
+}
+
+.footer > div{
+    padding-left: 45px;
+    width: 100%;
+}
+
+.footer p{
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.las:hover{
+    text-decoration: underline;
+    color: rgb(172, 172, 173);
+}
+
+/* media*/
+@media only screen and (min-width: 1280px) and (max-width:1330px){
+    .shop{
+        margin-left: auto;
+    }
+    .avdHead > img:last-child{
+        height: 103px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width:1280px){
+    .shop{
+        margin-left: auto;
+    }
+    .avdHead{
+        width: 35%; 
+    }
+    .avdHead >img:first-child{
+        height: 90px;
+        margin-bottom: 10px;
+    }
+    .avdHead > img:last-child{
+        margin-top: 10px;
+        height: 90px;
+    }
+    .img > div.carousel{
+        width: 65%;
+    }
+}
+
+@media only screen and (min-width: 1125px) and (max-width:1200px){
+    .main{
+        width: 92%;
+    }
+    .shop{
+        margin-left: auto;
+        width: 111px;
+        font-size: 13px;
+    }
+    
+    .avdHead{
+        width: 0%;
+        display: block;
+        z-index: 0; 
+    }
+    .img > div.carousel{
+        width: 100%;
+    }
+    .img > div.carousel  img{
+        width: 100%;
+    }
+    .footer >div:last-child{
+        margin-right: 15px;
+    }
+    #back-to-top{
+        left: 95%;
+        top: 90%;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width:1125px){
+    .main{
+        width: 92%;
+    }
+    nav .fa{
+        font-size: 18px !important;
+    }
+    nav  ul > li > a{
+        width: 125px;
+    }
+    nav > ul > li > a > img  {
+        width: 80%;
+        height: 55px;
+    }
+    nav > ul > li:first-child {
+        width: 152px;
+    }
+    nav > ul > li select{
+        font-size: 12px !important;
+        margin: 15px 0!important;
+    }
+    nav > ul > li input[type=text]{
+        font-size: 12px;
+        margin: 15px 0 !important;
+        width: 150px !important;
+    }
+    
+    .shop{
+        margin-left: auto;
+    }
+    .avdHead{
+        width: 0%;
+        display: block;
+        z-index: 0; 
+    }
+    .img > div.carousel{
+        width: 100%;
+    }
+    .img > div.carousel  img{
+        width: 100%;
+    }
+    .footer >div:last-child{
+        margin-right: 15px;
+    }
+    #back-to-top{
+        left: 95%;
+        top: 90%;
+    }
+}
+
+@media only screen and (min-width: 780px) and (max-width:1000px){
+    body > div:first-child{
+        height: 30px !important;
+    }
+    .main{
+        width: 94%;
+    }
+    nav .fa{
+        font-size: 18px !important;
+    }
+    nav  ul > li > a{
+        width: 115px;
+        font-size: 13px;
+        padding: 13px 20px;
+    }
+    nav > ul > li > a > img  {
+        width: 55%;
+        height: 47px;
+    }
+    nav > ul > li:first-child {
+        width: 105px;
+    }
+    nav > ul > li select{
+        font-size: 10px !important;
+        margin: 11px 0 !important;
+    }
+    nav > ul > li input[type=text]{
+        font-size: 10px !important;
+        margin: 11px 0 !important;
+        width: 130px !important;
+    }
+    
+    .shop{
+        margin-left: auto;
+        padding-top: 14px;
+        font-size: 0;
+        width: 60px;
+    }
+    .avdHead{
+        width: 0%;
+        display: block;
+        z-index: 0; 
+    }
+    .img > div.carousel{
+        width: 100%;
+    }
+    .img > div.carousel  img{
+        width: 100%;
+    }
+    .main > p{
+        font-size: 25px;
+    }
+    .phoneType > ul > li:first-child {
+        margin-left: 100px;
+    }
+    .option > ul > li:first-child{
+        margin-left: -29px;
+    }
+    .option > ul > li {
+        width: 120px;
+    }
+    .phoneType > ul > li {
+        width: 79px;
+    }
+    .footer >div:last-child{
+        margin-right: 15px;
+    }
+    section.sub > div > a > h4 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    section.sub > div > a > p {
+        font-size: 14px;
+    }
+    #back-to-top{
+        left: 95%;
+        top: 90%;
+    }
+    .footer > div > p{
+        font-size: 18px;
+    }
+    .footer > div > span{
+        font-size: 13px;
+    }
+    .footer > div > span > span{
+        font-size: 16px !important;
+    }
+    .footer > div:first-child > span >span:last-child{
+        font-size: 13px !important;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width:780px){
+    body > div:first-child{
+        height: 30px !important;
+    }
+    .main{
+        width: 100%;
+    }
+    nav .fa{
+        font-size: 18px !important;
+    }
+    nav  ul > li > a{
+        width: 115px;
+        font-size: 12px;
+        padding: 13px 20px;
+    }
+    nav > ul > li > a > img  {
+        width: 47%;
+        height: 47px;
+    }
+    nav > ul > li:first-child {
+        width: 90px;
+    }
+    nav > ul > li select{
+        font-size: 10px !important;
+        margin: 11px 0 !important;
+        width: 0;
+        display: none;
+    }
+    nav > ul > li input[type=text]{
+        font-size: 10px !important;
+        margin: 11px 0 !important;
+        width: 120px !important;
+        z-index: 100;
+    }
+    .shop{
+        margin-left: auto;
+        padding-top: 14px;
+        font-size: 0;
+        width: 60px;
+    }
+    .shop > a > i{
+        font-size: 15px !important;
+    }
+    .avdHead{
+        width: 0%;
+        display: block;
+        z-index: 0; 
+    }
+    .img > div.carousel{
+        width: 100%;
+    }
+    .img > div.carousel  img{
+        width: 100%;
+    }
+    .sharing > li:nth-child(1) {
+        top: 150px;
+    }
+    .sharing > li:nth-child(2) {
+        top: 200px;
+    }
+    .sharing > li:nth-child(3) {
+        top: 250px;
+    }
+    .main > p{
+        font-size: 25px;
+    }
+    .option > span{
+        font-size: 15px !important;
+    }
+    .option > ul > li:first-child{
+        margin-left: -29px;
+    }
+    .option > ul > li {
+        width: 120px;
+        font-size: 12px;
+    }
+    .phoneType > ul > li:first-child {
+        margin-left: 80px;/**/
+    }
+    .phoneType > ul > li {
+        width: 70px;
+        font-size: 12px;
+    }
+    .footer >div:last-child{
+        margin-right: 15px;
+    }
+    section.sub > div {
+        width: 33.1%;
+    }
+    section.sub > div > a > h4 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    section.sub > div > a > p {
+        font-size: 14px;
+    }
+    #back-to-top{
+        left: 90%;
+        top: 80%;
+    }
+    .footer > div > p{
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .footer > div > span{
+        font-size: 13px;
+    }
+    .footer > div > span > span{
+        font-size: 16px !important;
+    }
+    .footer > div:first-child > span >span:last-child{
+        font-size: 13px !important;
+    }
+}
+
+@media only screen and (min-width: 490px) and (max-width:600px){
+    body > div:first-child{
+        height: 30px !important;
+    }
+    .main{
+        width: 100%;
+    }
+    nav .fa{
+        font-size: 18px !important;
+    }
+    .logo{
+        width: 0;
+    }
+    nav  ul > li > a{
+        width: 100px;
+        font-size: 10px;
+        padding: 13px 15px;
+    }
+    nav > ul > li > a > img  {
+        width: 0;
+    }
+    nav > ul > li:first-child {
+        width: 20px;
+        background-image: linear-gradient(rgb(8, 105, 8),rgb(1, 27, 1));
+    }
+    nav > ul > li select{
+        font-size: 10px !important;
+        margin: 11px 0 !important;
+        width: 0;
+        display: none;
+    }
+    nav > ul > li input[type=text]{
+        font-size: 10px !important;
+        margin: 11px 0 !important;
+        width: 120px !important;
+    }
+    .shop{
+        margin-left: auto;
+        padding-top: 14px;
+        font-size: 0;
+        width: 60px;
+    }
+    .shop > a > i{
+        font-size: 15px !important;
+    }
+    .avdHead{
+        width: 0%;
+        display: block;
+        z-index: 0; 
+    }
+    .img > div.carousel{
+        width: 100%;
+    }
+    .img > div.carousel  img{
+        width: 100%;
+    }
+    .sharing > li:nth-child(1) {
+        top: 150px;
+    }
+    .sharing > li:nth-child(2) {
+        top: 200px;
+    }
+    .sharing > li:nth-child(3) {
+        top: 250px;
+    }
+    .main > p{
+        font-size: 25px;
+    }
+    .sharing > li{
+        left: -200px;
+    }
+    .option > span{
+        font-size: 11px !important;
+    }
+    .option > ul > li:first-child{
+        margin-left: -29px;
+    }
+    .option > ul > li {
+        width: 95px;
+        font-size: 10px;
+    }
+    .phoneType > ul > li:first-child {
+        margin-left: 58px;
+    }
+    .phoneType > ul > li {
+        width: 60px;
+        font-size: 10px;
+    }
+    .footer >div:last-child{
+        margin-right: 15px;
+    }
+    section.sub > div {
+        width: 49.7%;
+    }
+    section.sub > div > a > h4 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    section.sub > div > a > p {
+        font-size: 14px;
+    }
+    #back-to-top{
+        left: 90%;
+        top: 80%;
+    }
+    .footer > div{
+        padding-left: 15px !important;
+    }
+    .footer > div > p{
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .footer > div > span{
+        font-size: 13px;
+    }
+    .footer > div > span > span{
+        font-size: 16px !important;
+    }
+    .footer > div:first-child > span >span:last-child{
+        font-size: 13px !important;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width:489px){
+    body > div:first-child{
+        height: 30px !important;
+    }
+    .main{
+        width: 100%;
+    }
+    nav .fa{
+        font-size: 10px !important;
+    }
+    .logo{
+        width: 0;
+    }
+    nav  ul > li > a{
+        width: 80px;
+        font-size: 8px;
+        padding: 13px 15px;
+    }
+    nav > ul > li > a > img  {
+        width: 0;
+    }
+    nav > ul > li:first-child {
+        width: 20px;
+        background-image: linear-gradient(rgb(8, 105, 8),rgb(1, 27, 1));
+    }
+    nav > ul > li select{
+        font-size: 10px !important;
+        margin: 8px 0 !important;
+        width: 0;
+        display: none;
+    }
+    nav > ul > li input[type=text]{
+        font-size: 9px !important;
+        margin: 8px 0 !important;
+        width: 120px !important;
+        height: 20px !important;
+    }
+    .shop{
+        margin-left: auto;
+        padding-top: 14px;
+        font-size: 0;
+        width: 60px;
+    }
+    .shop > a > i{
+        font-size: 15px !important;
+    }
+    .avdHead{
+        width: 0%;
+        display: block;
+        z-index: 0; 
+    }
+    .img > div.carousel{
+        width: 100%;
+    }
+    .img > div.carousel  img{
+        width: 100%;
+    }
+    .sharing > li:nth-child(1) {
+        top: 150px;
+    }
+    .sharing > li:nth-child(2) {
+        top: 200px;
+    }
+    .sharing > li:nth-child(3) {
+        top: 250px;
+    }
+    .main > p{
+        font-size: 20px;
+    }
+    .sharing > li{
+        left: -200px;
+    }
+    .option > span{
+        font-size: 11px !important;
+    }
+    .option > ul > li:first-child{
+        margin-left: -45px;
+    }
+    .option > ul > li {
+        width: 95px;
+        font-size: 10px;
+    }
+    .phoneType > ul > li:first-child {
+        margin-left: -10px;
+    }
+    .phoneType > ul > li {
+        width: 60px;
+        font-size: 10px;
+    }
+    .footer >div:last-child{
+        margin-right: 15px;
+    }
+    section.sub > div {
+        width: 49.7%;
+    }
+    section.sub > div > a > h4 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    section.sub > div > a > p {
+        font-size: 14px;
+    }
+    #back-to-top{
+        left: 90%;
+        top: 80%;
+    }
+    .footer > div{
+        padding-left: 10px ;
+    }
+    .footer-sub > h5{
+        font-size: 15px;
+    }
+    .footer-sub > p{
+        font-size: 10px;
+    }
+    .footer-sub > input[type=text]{
+        width: 215px;
+        font-size: 13px;
+    }
+    .footer-sub > input[type=button]{
+        width: 75px;
+        font-size: 13px;
+    }
+    .footer > div > p{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .footer > div > span{
+        font-size: 9px;
+    }
+    .footer > div > img:first-child{
+        width: 90%;
+    }
+    .footer > div > span > span{
+        font-size: 16px !important;
+    }
+    .footer > div:first-child > span >span:last-child{
+        font-size: 13px !important;
+    }
+}
