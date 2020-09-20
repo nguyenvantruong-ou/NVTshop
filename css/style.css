@@ -52,8 +52,8 @@ nav  ul > li > a{
 }
 
 nav ul > li > a:hover{
-    background-image: linear-gradient(0deg, black, rgb(94, 94, 94));
-    color: white;
+    background-color: #e1e1e1;
+    color: #666;
     text-decoration: none;
     border: 1px solid;
     border-top-color: red;
@@ -115,6 +115,16 @@ div.img{
 .avdHead >img{
     width: 100%;
     margin-top: 6px;
+}
+
+.avdHead >img:first-child{
+    height: 100px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.avdHead >img:last-child{
+    margin-top: 10px;
 }
 
 .img > div.carousel{
