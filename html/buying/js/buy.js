@@ -198,6 +198,9 @@ function buy(){
             document.getElementById("ok").style.opacity = 0
             document.getElementById("ok").style.zIndex = -1
         },3000)
+        setTimeout(function(){
+            window.location.replace("https://nguyenvantruong-ou.github.io/NVTshop/");
+        },3000)
     }
 }
 

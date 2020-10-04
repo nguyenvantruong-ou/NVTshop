@@ -50,8 +50,23 @@
     <script>
         AOS.init();
     </script>
-    <div style="height: 40px;">
+    <div id="head1" style="height: 40px;">
         <img src="images/avd/qc.jpg" alt="qc" width="100%" height="100%">
+    </div>
+    <!-- thanh menu hiển thị trên điện thoại-->
+    <div class="mobile">
+        <div>
+            <a href="index.html"><img style="width:100%" src="images/avd/logoVT.jpg" alt=""></a>
+        </div>
+        <div>
+            <input type="search" placeholder="Tìm kiếm" style="width:100%"><i class="fa fa-search" onclick="mSearch()"></i>
+        </div>
+        <div >
+            <i class="fa fa-shopping-cart"></i>
+        </div>
+        <div id="showMenu" onclick="mShowMenu()">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
     </div>
     <div class="main">
         <nav>
@@ -108,6 +123,54 @@
                 </div>
             </ul>
         </nav>
+        <!--giao diện menu trên điện thoại-->
+        
+        <div id="mMenu">
+            <div style="display:flex">
+                <div style="width:20%; height: 70px; padding:1%"> <img src="images/avd/logoVT.jpg" alt=""></div>
+                
+                <div id="hideMenu" onclick="mHideMenu()">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="mPhone" onclick="showMenuPhone()"><i class="fa fa-mobile" aria-hidden="true" style="font-size: 35px;margin-left:5px"></i><a href="#phone" onclick="mHideMenu()" style="color: #333; text-decoration: none;"> Điện thoại</a><i id="mShowPhoneMenu" style="font-size: 18px; margin-left: 15px;opacity: 1;" class="fa fa-angle-down" ></i><i id="mHidePhoneMenu" style="opacity: 0;" class="fa fa-angle-up" aria-hidden="true"></i></div>
+            <hr>
+            <table id="mMenuPhone" style="margin-left:20px">
+                <tr>
+                    <td onclick="mHideMenu()"><a href="javascript:;" onclick="iphone(1)">IPHONE</a></td>
+                    <td onclick="mHideMenu()"><a href="javascript:;" onclick="samsung(2)">SAMSUNG</a></td>
+                </tr>
+                <tr>
+                    <td onclick="mHideMenu()"><a href="javascript:;" onclick="oppo(3)">OPPO</a></td>
+                    <td onclick="mHideMenu()"><a href="javascript:;" onclick="xiaomi(4)">XIAOMI</a></td>
+                </tr>
+                <tr>
+                    <td onclick="mHideMenu()"><a href="javascript:;" onclick="vivo(5)">VIVO</a></td> 
+                </tr>
+                <tr>
+                    <td onclick="mHideMenu()"><a href="javascript:;" onclick="otherPhone(6)">Khác...</a></td>
+                </tr>
+            </table>
+            <div class="mLaptop" onclick="showMenuLaptop()"><i class="fa fa-laptop" aria-hidden="true" style="font-size: 30px;"></i><a href="#laptop" onclick="mHideMenu()" style="color: #333; text-decoration: none;"> Laptop</a><i id="mShowLaptopMenu" style="font-size: 18px; margin-left: 55px;opacity: 1;" class="fa fa-angle-down" ></i><i id="mHideLaptopMenu" style="opacity: 0;" class="fa fa-angle-up" aria-hidden="true"></i></div>
+            <hr>
+            <table id="mMenuLaptop" style="margin-left:20px">
+                <tr><td  onclick="mHideMenu()"><a href="#laptop">MACBOOK</a></td></tr>
+                <tr><td  onclick="mHideMenu()"><a href="#laptop">DELL</a></td></tr>
+                <tr><td  onclick="mHideMenu()"><a href="#laptop">ASUS</a></td></tr>
+                <tr><td  onclick="mHideMenu()"><a href="#laptop">HP</a></td></tr>
+            </table>
+            <div class="mAcc" onclick="showMenuAcc()"><i class="fa fa-headphones" aria-hidden="true" style="font-size: 30px;margin-right: 10px;"></i><a href="#acc" onclick="mHideMenu()" style="color: #333; text-decoration: none;"> Phụ kiện</a><i id="mShowAccMenu" style="font-size: 18px; margin-left: 30px;opacity: 1;" class="fa fa-angle-down" ></i><i id="mHideAccMenu" style="opacity: 0;" class="fa fa-angle-up" aria-hidden="true"></i></div>
+            <hr>
+            <table id="mMenuAcc" style="margin-left:20px">
+                <tr><td  onclick="mHideMenu()"><a href="#acc">SẠC</a></td></tr>
+                <tr><td  onclick="mHideMenu()"><a href="#acc">TAI NGHE</a></td></tr>
+                <tr><td  onclick="mHideMenu()"><a href="#acc">LOA</a></td></tr>
+            </table>
+        </div>
+        
+        <!--Nút menu cứng-->
+        <div id="menu2" onclick="mShowMenu()"><i class="fa fa-bars" aria-hidden="true"></i></div>
+       
         <hr  color="black" style="margin:0">
         <section>
             <div class="img">
@@ -122,19 +185,19 @@
                             </ul>
                             <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="images/avd/show2.gif" alt="phone">  
+                                <a href="html/phone-Samsung-note-20-ultra.html"><img src="images/avd/show2.gif" alt="phone"> </a> 
                             </div>
                             <div class="carousel-item">
-                                <img src="images/avd/show1.png" alt="phone" >   
+                                <a href="javascript:;" onclick="iphone(1)"><img src="images/avd/show1.png" alt="phone" > </a> 
                             </div>
                             <div class="carousel-item">
-                                <img src="images/avd/show3.jpg" alt="phone">
+                                <a href="javascript:;" onclick="iphone(1)"><img src="images/avd/show3.jpg" alt="phone"></a>
                             </div>
                             <div class="carousel-item">
-                                <img src="images/avd/show5.png" alt="phone">
+                                <a href="#acc"><img src="images/avd/show4.png" alt="phone"></a>
                             </div>
                             <div class="carousel-item">
-                                <img src="images/avd/show1.png" alt="phone">
+                                <a href="javascript:;" onclick="iphone(1)"><img src="images/avd/show5.png" alt="phone"></a>
                             </div>
                             </div>
                             <a class="carousel-control-prev" href="#demo" data-slide="prev">
@@ -152,19 +215,23 @@
                 </div>
                
             </div>
+        <!-- giảm giá sốc cuối tuần-->
+        <div id="GG" class="center-align wrap-ping" style="padding-top: 15px; margin-bottom: -25px;">
+            <a href="https://landing.viettelstore.vn/thay-pin-iphone-chinh-hang" title="Giảm 20% thay pin iPhone - Giá chỉ từ 240.000đ" target="_blank"><div class="spec-note"><span id="dot"><span class="ping"></span></span> <span class="text">Giảm 20% thay pin iPhone - Giá chỉ từ 240.000đ</span></div></a>
+        <style>.wrap-head{height:auto!important}.spec-note{color:red;background:#fff}.spec-note #dot{width:10px;height:10px;background-color:#f33;border-radius:100%;margin-right:15px;margin-top:5px;margin-left:10px;display:inline-block}.wrap-ping{background:#fff;padding:6px;margin-top:-5px}.spec-note .ping{border:1px solid #f33;width:10px;height:10px;opacity:1;background-color:rgba(238,46,36,.2);border-radius:100%;-webkit-animation-duration:1.25s;animation-duration:1.25s;-webkit-animation-name:ping;animation-name:ping;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-timing-function:linear;animation-timing-function:linear;display:block}.spec-note .text{display:inline-block}@keyframes ping{0%{opacity:1;-webkit-transform:scale(1);transform:scale(1)}100%{-webkit-transform:scale(3);transform:scale(3);opacity:0}}</style>
         </section>
         <section class="share">
             <ul class="sharing">
                 <li>
-                    <a href="#">Facebook</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://nguyenvantruong-ou.github.io/NVTshop/">Facebook</a>
                     <img src="images/avd/fb-logo.jpg" alt="Fb">
                 </li>
                 <li>
-                    <a href="#">Zalo</a>
+                    <a href="https://zalo.me/0356371760">Zalo</a>
                     <img src="images/avd/zalo-logo.jpg" alt="Zalo">
                 </li>
                 <li>
-                    <a href="#">Twice</a>
+                    <a href="https://twitter.com/share?text=Init%20HTML%20%E2%80%93%20Kh%E1%BB%9Fi%20%C4%91%E1%BA%A7u%20d%E1%BB%B1%20%C3%A1n%20Web&url=https://nguyenvantruong-ou.github.io/NVTshop/">Twice</a>
                     <img src="images/avd/twitter-logo.jpg" alt="Twitter">
                 </li>
             </ul>
@@ -173,7 +240,18 @@
         <hr  id="phone" size="2px" color="lightgray">
         <p><i class="fa fa-mobile"></i> ĐIỆN THOẠI</p>
         <hr size="2px" color="lightgray">
-        <section class="option">
+        <!-- mobile-->
+        <section class="manuPhone">
+            <ul>
+                <li class="mopt" id="m-iPhone" onclick="m_iPhone(this)"><img src="images/mobile/iPhone.jpg" alt="" width="90%" height="95%" style="margin-bottom: 5px;"><span id="flagIphone"></span> </li>
+                <li class="mopt" id="m-samsung" onclick="m_Samsung(this)"><img src="images/mobile/samsung.jpg" alt="" width="90%"  height="90%" style="margin-bottom: 10px;"><span id="flagSamsung"></span></li>
+                <li class="mopt" id="m-oppo" onclick="m_Oppo(this)"><img src="images/mobile/oppo.png" alt="" width="90%" ><span id="flagOppo"></span></li>
+                <li class="mopt" id="m-xiaomi" onclick="m_Xiaomi(this)"><img src="images/mobile/xiaomi.png" alt="" width="100%"  height="100%" style="margin-bottom: 5px;"><span id="flagXiaomi"></span></li>
+                <li class="mopt" id="m-vivo" onclick="m_Vivo(this)"><img src="images/mobile/vivo.png" alt="" width="80%"  height="100%" style="margin-bottom: 5px;"><span id="flagVivo"></span></li>
+                <li class="mopt" id="m-more" onclick="m_OtherPhone(this)">Khác<span id="flagOther"></span></li>
+            </ul>
+        </section>
+        <section class="option ">
             <span style="padding: 10px; font-size: 18px;">Sắp xếp theo:</span>
             <ul>
                 <li class="opt fist" onclick="changeList('phobien', this)">Phổ biến</li>
@@ -534,7 +612,7 @@
         <!-- laptop-->
         <p><i class="fa fa-laptop"></i> LAPTOP</p>
         <hr size="2px" color="lightgray">
-        <img src="images/avd/laptop-Macbook-images.jpg" alt="Laptop" style="width:100%"/>
+        <img class="accLaptop" src="images/avd/laptop-Macbook-images.jpg" alt="Laptop" style="width:100%"/>
         <br><br>
         <section class="sub">
             <div>
@@ -610,11 +688,50 @@
         <input type="text" id="footerEmail" onclick="hideEmail()" placeholder="Nhập đại chỉ email của bạn"> <input type="button" value="ĐĂNG KÝ" onclick=" footerEmail()"><br>
         
     </div> 
-    <div style="margin-left:450px; background-color: white; height: 100px;">
+    <div class="emailF" style="margin-left:450px; background-color: white; height: 100px;">
         <div id="tbEmail" style=" color: red; display: none;"></div>
         <div id="tcEmail" style="color: green; display: none;"></div>
     </div>
-    
+    <!-- footer for mobile-->
+    <div class="footerGame">
+        <h2 style="font-family:Georgia, 'Times New Roman', Times, serif;color: white;margin-left: 1%; padding-top: 10px;" >GAME NỔI BẬT</h2>
+        <div id="demo1" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="https://lienquan.garena.vn/" target="_blank"><img src="images/mobile/lienquan.jpg"> </a> 
+                    <h3>Arena of Valor </h3>
+                    <p>Cùng đồng đội thách đấu hàng triệu người chơi, khiến thế giới phải biết đến tên của bạn!</p>
+                </div>
+                <div class="carousel-item ">
+                    <a href="https://fo4.garena.vn/"  target="_blank"><img src="images/mobile/fifa.png" > </a> 
+                    <h3> FIFA Online 4</h3>
+                    <p>Thỏa giấc mơ sân cỏ, sống trọn đam mê bóng đá với engine thế hệ mới và đẳng cấp vượt trội</p>
+                </div>
+                <div class="carousel-item ">
+                    <a href="https://ff.garena.vn/" target="_blank"><img src="images/mobile/FF.jpg" > </a> 
+                    <h3>Free Fire</h3>
+                    <p>Sống dai thành huyền thoại Game bắn súng sinh tồn trên điện thoại hấp dẫn</p>
+                </div>
+                <div class="carousel-item ">
+                    <a href="https://lienminh.garena.vn/" target="_blank"><img src="images/mobile/lienminh.jpg"> </a> 
+                    <h3>Liên Minh Huyền Thoại</h3>
+                    <p>Game mới nhất Liên Minh Huyền Thoại Gia nhập liên minh, khẳng định bản lĩnh, thách thức huyền thoại</p>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo1" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
     <footer>
         <section class="footer">
             <div width="35%">
@@ -625,6 +742,7 @@
                 <span>Đặt mua hàng:  <span style="font-size: 18px; color:rgb(253, 80, 17);">1800 1760</span><span style="font-size: 13px;"> (7:00-22:00)</span></span><br>
                 <span>Địa chỉ: 371, Nguyễn Kiệm, Q. Gò Vấp, Tp. Hồ Chí Minh</span><br>
                 <span>Gmail: truong977@gmail.com</span>
+            </div>
             </div>
             <div width="35%">
                 <p>THỜI GIAN LÀM VIỆC</p>
@@ -640,12 +758,27 @@
                 <p>HÌNH THỨC GIAO HÀNG</p>
                 <hr size="1px" color="white" >
                 <span>Giao hàng miễn phí trên toàn quốc </span><br>
-                <img src="images/avd/logoVT.jpg" alt="VT" width="72%"> <br>
+                <img class="footerImg" src="images/avd/logoVT.jpg" alt="VT" width="72%"> <br>
                 <img src="images/avd/dichvuGH.png" alt="giao hàng" width="20%">
                 <img src="images/avd/dichvuGH1.png" alt="giao hàng" width="51%" height="20%" style="margin-top:5px">
 
             </div>
         </section>
     </footer>
+    <div class="footerMobile">
+        <div style="margin:7px 5px">GỌI MUA HÀNG: <i class="fa fa-phone-square" style="color: rgb(52, 52, 255); font-size: 20px;"></i><a style="text-decoration: none;" href="callto:1800 1760">1800 1760</a><span style="font-size: 13px;">(Miễn phí)</span></div>
+        <div style="margin:7px 5px">GỌI KHIẾU NẠI:  <i class="fa fa-phone-square" style="color: rgb(52, 52, 255); font-size: 20px;"> </i><a style="text-decoration: none;" href="callto:1800 1760">1800 1760</a><span style="font-size: 13px;">(Miễn phí)</span></div>
+        <div onclick="moreFm()">Các thông tin khác <i id="showFm" style="font-size: 18px; opacity: 1;" class="fa fa-caret-down" aria-hidden="true"></i><i id="hideFm" style="font-size: 18px; opacity: 0;" class="fa fa-caret-up" aria-hidden="true"></i></div>
+        <ul style="display: none; " id="moreFm">
+            <li>Hướng dẫn mua online</li>
+            <li>Chính sách bảo hành</li>
+            <li>Hướng dẫn mua trả góp</li>
+            <li>Giới thiệu công ty</li>
+            <li>Lịch sử mua hàng</li>
+        </ul>
+        <div style="color: #555; background-color: #e9e9e9; font-size: 11px;padding: 10px 5px 30px 5px; ">
+            © 2020 Bài tập lớn/ Tên: Nguyễn Văn Trường / Sinh viên trường Đại học Mở Thành phố Hồ Chí Minh / Địa chỉ: 371, Nguyễn Kiệm, Q. Gò Vấp, Tp. Hồ Chí Minh / Điện thoại: 035 637 1760 / Email: truongidol977@gmail.com. Mục đích: Tìm hiểu và học hỏi kinh nghiệm( không chú trọng nội dung).
+        </div>
+    </div>
 </body>
 </html>

@@ -53,7 +53,7 @@ nav  ul > li > a{
 
 nav ul > li > a:hover{
     background-color: #e1e1e1;
-    color: #666;
+    color: #333;
     text-decoration: none;
     border: 1px solid;
     border-top-color: red;
@@ -107,27 +107,12 @@ div.img{
     display: flex;
 } 
 
-.avdHead{
-    width: 40%;
-    margin-left: 5px;
-}
-
-.avdHead >img{
+.img > div:first-child img{
     width: 100%;
-    margin-top: 6px;
+    height: 307px;
 }
 
-.avdHead >img:first-child{
-    height: 100px;
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-.avdHead >img:last-child{
-    margin-top: 10px;
-}
-
-.img > div.carousel{
+.img  > div:first-child{
     width: 60%;
     z-index: 1;
 }
@@ -158,6 +143,25 @@ div.img{
     background-color: rgb(46, 45, 45);
 }
 
+.avdHead{
+    width: 40%;
+    margin-left: 5px;
+}
+
+.avdHead >img{
+    width: 100%;
+    margin-top: 6px;
+}
+
+.avdHead >img:first-child{
+    height: 100px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.avdHead >img:last-child{
+    margin-top: 10px;
+}
 /* CSS SHARE*/
 .sharing{
     list-style-type: none;
@@ -317,6 +321,7 @@ section.sub > div > a{
     list-style-type: none;
     display: flex;
 }
+
 .option > ul > li{
     width: 130px;
     color: #288ad6;
@@ -332,7 +337,6 @@ section.sub > div > a{
     background-color: #288ad6;
     color: white;
 }
-
 .phoneType > ul > li{
     width: 100px;
     color: #288ad6;
@@ -369,6 +373,7 @@ section.sub > div > a{
     padding-top: 0px;
     transition: 0.5s;
     text-align: center;
+    z-index: 10000;
 }
 #back-to-top:hover{
     background-color: black;
@@ -432,6 +437,276 @@ footer{
     color: rgb(172, 172, 173);
 }
 
+/* giao diện trên điện thoại*/
+div.mobile{
+    width: 100%;
+    background-image: linear-gradient(#f6412e,#fe6433);
+    display: flex;
+    opacity: 0;
+    z-index: -1;
+}
+
+div.mobile >div:first-child{
+    width: 20%;
+    margin: 1% 1%;
+}
+
+div.mobile >div:first-child img{
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+div.mobile > div:nth-child(2){
+    width: 40%;
+    margin: 2%;
+    display: flex;
+}
+
+div.mobile > div:nth-child(2) > input{
+    border: 2px solid black;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+div.mobile > div:nth-child(2) > i{
+    background-color: black;
+    padding: 1%;
+    width: 15%;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 5px;
+}
+
+div.mobile > div:nth-child(3){
+    width: 10%;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 1%;
+    margin-left: 15%;
+}
+
+div.mobile > div:nth-child(3):hover{
+    background-color: rgb(255, 17, 0);
+}
+
+div.mobile > div:nth-child(4):hover{
+    background-color: rgb(255, 17, 0);
+}
+
+div.mobile > div:nth-child(4){
+    width: 10%;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    border-right: 1px solid black;
+    padding: 1%;
+}
+
+#hideMenu{
+    background-color: rgb(151, 5, 5);
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    width: 10%;
+    height: 70px;
+    margin-left: auto;
+    border-radius: 5px;
+    padding: 1%;
+    z-index: 100000;
+}
+
+#hideMenu:hover{
+    background-color: rgb(252, 71, 0);
+    color: white;
+}
+
+ 
+#mMenu{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.932);
+    font-size: 25px;
+    color: #333;
+    padding-left: 5%;
+    top: 0;
+    z-index: 10000;
+    opacity: 0;
+    position: fixed;
+    left: -2000px;
+    transition: all 0.7s;
+}
+
+#mMenu > div:first-child{
+    background-image: linear-gradient(#e25e35,#ff1900);
+}
+
+#mMenu > div:first-child img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#mMenu > div  i{
+    margin-right: 0.5%;
+}
+
+#mMenu > hr{
+    size: 1px;
+    color: #333;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-right: 2%;
+}
+
+#mMenu > table{
+    margin-left: 3%;
+    display: none;
+}
+
+#mMenu > table td{
+    width: 250px;
+}
+
+#mMenu > table td:hover{
+    background-color: rgb(192, 192, 192);
+}
+
+#mMenu > table a{
+    padding: 2% 175px 1% 1%;
+    font-size: 17px;
+}
+.mPhone {
+    margin-top: 5%;
+    padding: 10px;
+    background-image: linear-gradient(white ,rgb(236, 232, 232) );
+}
+.mLaptop, .mAcc{
+    padding: 10px;
+    background-image: linear-gradient(white ,rgb(236, 232, 232) );
+}
+
+.mPhone a {
+    margin-left: 15px;
+}
+/* menu cứng*/
+#menu2{
+    opacity: 0;
+    font-size: 35px;
+    color: white;
+    background-image: linear-gradient(#f6422ec9,#fe6233d8);
+    text-align: center;
+    width: 40px;
+    position: fixed;
+    left: 10px;
+    top: 70px;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+/*menu trượt ngang điện thoại*/
+.manuPhone {
+    background-color: white;
+    padding: 2px;
+    display: none;
+}
+.manuPhone ul{
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: scroll !important;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.manuPhone > ul > li{
+    border: 1px solid  rgb(207, 207, 207);
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    margin: 0 6px 0 0;
+    color: #288ad6;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100px;
+    width: 30%;
+    border-radius: 4px;
+}
+#flagIphone, #flagSamsung, #flagOppo, #flagXiaomi, #flagVivo, #flagOther{
+    content: "";
+    width: 23px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAoCAYAAACB4MgqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1RDlCNUE2MjRCQjgxMUVBQTEyRkEwNENDMEQzMkE2MiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1RDlCNUE2MzRCQjgxMUVBQTEyRkEwNENDMEQzMkE2MiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjVEOUI1QTYwNEJCODExRUFBMTJGQTA0Q0MwRDMyQTYyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjVEOUI1QTYxNEJCODExRUFBMTJGQTA0Q0MwRDMyQTYyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+O8UzUAAAA0RJREFUeNrUmF1IU2EYx//vu6ObMnXT+Vmnm+wiYhFRpBWVJRFp0gfd6G4KupCQvgiKvq4iIbA06koKuiiKCIO8sCuzLxreKEL2KVZm6HTZckOd5/SclWTmcmc7m+c88LJn5z1n+51nz/s/739s981eGQYKBiaByUcFQ0EzFqCXShpNgoFKPcA52yFJslt5y41Rabw2yeYiSt1Tx7gB2qONm/laSnumH+c6h75dkCVupXR45hzXb0vz2nsusYrSsdnmNQXPtQqoK8/D8Y2OWMoc5IwfoOwkjbBSrZmq2FNMOFeag9w0AWYh6nr4GMdeSGiZ60RNwK3JHGdLs0PQgQkJl554onmw9AmMlwUhdURyfsytYhEYzmzJxiJbMiYmZdS2DuLd0Lha6E4L54rcdUR6TUzgSXT1iZJsFDrMmJRk1FGlu76OqVWORxkZKesp/azmurDgNgvHgvTwncQZcGyDA848C2RZxrUXw3B/Cqjtj0bnQrFM6W21RQsLfn5bLuor8rFrWfqs8weLM7FaTA3lN9q/ofXDqJoyy4yz05Qp6hGM5tcOC/7WM678jHCttKG6KBMm9mdu/yo7Ni22hvI7HSNo7vapYIbywS6lNrG0adheuPJsKLTYNhdaUbrEihzS6IuPB1G+NA1lNJRofuXD3c4RNdBembOdpM5tsYpCWHBixlXq235fEJUrMrA834KGigLYU02h+db3P3C93asGugempO2Qg91aSPCcqnK/6zupxRDG6U6moF9+9IduSkVTu1N/7e40gY74AfS81w/PaBA167LQ653A5aceSHLEcteUZROqAl74tdxeRPzkfEOLteZBvzq142hwVolHvjzsl7TehMVld6j4Qurpw5QeoiHF4zs0t27TfWE8t72CxqX+yxfGM7h2lf7XF+oeXPGFZo7imb5Q1+DTfKEXCYyYwKmfL/zPF+pvcSq+EKyaLGHjfJnpaMAj9oW6AVfrC3XR44ov5Ba2Ro0vnHdwgm757Qv79PKHEY+AutEpiuXR+ML5ASdfyBk7FYsvTPjiVHyhzNg+su+3oNMQ4ukLEwautS9MUI9r7wvjDq74QoddKKF0AAYJEg5e73SJeyj3w0DxU4ABAGYG7XZm8JELAAAAAElFTkSuQmCC) no-repeat left top;
+    background-size: 23px 20px;
+    z-index: 2;
+    opacity: 0;
+}
+/* footer mobile*/
+.game{
+    width: 100%;
+    height: 300px;
+}
+.game img{
+    width: 100%;
+    height: 100%;
+}
+.game .carousel-inner{
+    width: 100%;
+}
+.footerGame{
+    background-image:  linear-gradient(rgb(44, 16, 2),#692802, black);
+}
+
+.footerGame img{
+    width: 100%;
+    height: 500px;
+}
+
+.footerGame h3{
+    text-align: center;
+    color: rgb(172, 169, 169);
+}
+.footerGame p{
+    font-size: 13px;
+     color: #545557;
+     text-align: center;
+ }
+.carousel-indicators li {
+    width: 7px !important;
+    height: 5px !important;
+    border-radius: 50%;
+    margin-top: -100px !important;
+}
+/* footer mobile*/
+.footerMobile{
+    margin-top: 50px;
+    width: 100%;
+    height: 150px;
+    color: #333;
+    display: none;
+}
+.footerMobile > div{
+    font-size: 14px;
+}
+
+.footerMobile > div:nth-child(3){
+    color: #288ad6;
+    margin-left: 5px;
+}
+.footerMobile > ul > li{
+    color:#288ad6;
+    font-size: 13px;
+}
+.footerMobile > ul > li:hover{
+    color: rgb(255, 94, 0);
+}
 /* media*/
 @media only screen and (min-width: 1280px) and (max-width:1330px){
     .shop{
@@ -448,10 +723,6 @@ footer{
     }
     .avdHead{
         width: 35%; 
-    }
-    .avdHead >img:first-child{
-        height: 90px;
-        margin-bottom: 10px;
     }
     .avdHead > img:last-child{
         margin-top: 10px;
@@ -472,11 +743,19 @@ footer{
         font-size: 13px;
     }
     
+    .img > div:first-child{
+        width: 65%;
+    }
+
+    .img >div:first-child img{
+        height: 280px !important;
+    }
     .avdHead{
-        width: 0%;
+        width: 35%;
         display: block;
         z-index: 0; 
     }
+
     .img > div.carousel{
         width: 100%;
     }
@@ -522,8 +801,16 @@ footer{
     .shop{
         margin-left: auto;
     }
+    
+    .img > div:first-child{
+        width: 65%;
+    }
+
+    .img >div:first-child img{
+        height: 280px !important;
+    }
     .avdHead{
-        width: 0%;
+        width: 35%;
         display: block;
         z-index: 0; 
     }
@@ -542,473 +829,980 @@ footer{
     }
 }
 
-@media only screen and (min-width: 780px) and (max-width:1000px){
-    body > div:first-child{
-        height: 30px !important;
-    }
+@media only screen and (min-width: 850px) and (max-width:1000px){
     .main{
-        width: 94%;
+        width: 98%;
     }
-    nav .fa{
-        font-size: 18px !important;
+    .img > div:first-child img{
+        height: 250px;
     }
-    nav  ul > li > a{
-        width: 115px;
-        font-size: 13px;
-        padding: 13px 20px;
+     
+    nav > ul{
+        display: none;
     }
-    nav > ul > li > a > img  {
-        width: 55%;
-        height: 47px;
+
+    div.mobile{
+        opacity: 1;
+        z-index: 1000;
     }
-    nav > ul > li:first-child {
-        width: 105px;
+
+    #mMenu{
+        left: -1000px;
     }
-    nav > ul > li select{
-        font-size: 10px !important;
-        margin: 11px 0 !important;
+
+    .manuPhone{
+        display: block;
     }
-    nav > ul > li input[type=text]{
-        font-size: 10px !important;
-        margin: 11px 0 !important;
-        width: 130px !important;
+
+    .phoneType{
+        display: none;
     }
-    
-    .shop{
-        margin-left: auto;
-        padding-top: 14px;
-        font-size: 0;
-        width: 60px;
+
+    section.sub > div{
+        width: 33.1%;
+    }
+
+    .img > div:first-child{
+        width: 100%;
     }
     .avdHead{
         width: 0%;
-        display: block;
-        z-index: 0; 
     }
-    .img > div.carousel{
-        width: 100%;
+    #head1{
+        display: none;
     }
-    .img > div.carousel  img{
-        width: 100%;
+    .accLaptop{
+        height: 40px;
     }
+
+    #back-to-top{
+        top: 75%;
+        left: 94%;
+    }
+    footer {
+        background-image: linear-gradient(rgb(158, 51, 19), rgb(255, 60, 0));
+    }
+
+    .footer > div > p {
+        font-size: 15px;
+    }
+    .footer > div {
+        padding-left: 25px;
+    }
+    .footer > div > span {
+        font-size: 15px;
+    }
+
+    .footer > div > span span:first-child {
+        color: rgb(34, 31, 31) !important;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width:850px){
+    .main{
+        width: 99%;
+    }
+
     .main > p{
-        font-size: 25px;
+        font-size: 30px;
     }
+    .img > div:first-child img{
+        height: 250px;
+    }
+     
+    nav > ul{
+        display: none;
+    }
+
+    div.mobile{
+        opacity: 1;
+        z-index: 1000;
+    }
+    
+    div.mobile >div:first-child {
+        padding-top: 0.9%;
+    }
+
+    #mMenu{
+        left: -800px;
+    }
+
+    .manuPhone{
+        display: block;
+    }
+
+    .phoneType{
+        display: none;
+    }
+
+    .img > div:first-child{
+        width: 100%;
+    }
+
+    .option > ul{
+        margin-left: -35px;
+    }
+
     .phoneType > ul > li:first-child {
         margin-left: 100px;
     }
-    .option > ul > li:first-child{
-        margin-left: -29px;
-    }
-    .option > ul > li {
-        width: 120px;
-    }
-    .phoneType > ul > li {
-        width: 79px;
-    }
-    .footer >div:last-child{
-        margin-right: 15px;
-    }
-    section.sub > div > a > h4 {
-        font-size: 16px;
-        font-weight: 600;
-    }
-    section.sub > div > a > p {
-        font-size: 14px;
-    }
-    #back-to-top{
-        left: 95%;
-        top: 90%;
-    }
-    .footer > div > p{
-        font-size: 18px;
-    }
-    .footer > div > span{
-        font-size: 13px;
-    }
-    .footer > div > span > span{
-        font-size: 16px !important;
-    }
-    .footer > div:first-child > span >span:last-child{
-        font-size: 13px !important;
-    }
-}
 
-@media only screen and (min-width: 600px) and (max-width:780px){
-    body > div:first-child{
-        height: 30px !important;
+    section.sub > div{
+        width: 49.8%;
+        text-align: left;
     }
-    .main{
-        width: 100%;
-    }
-    nav .fa{
-        font-size: 18px !important;
-    }
-    nav  ul > li > a{
-        width: 115px;
-        font-size: 12px;
-        padding: 13px 20px;
-    }
-    nav > ul > li > a > img  {
-        width: 47%;
-        height: 47px;
-    }
-    nav > ul > li:first-child {
-        width: 90px;
-    }
-    nav > ul > li select{
-        font-size: 10px !important;
-        margin: 11px 0 !important;
-        width: 0;
-        display: none;
-    }
-    nav > ul > li input[type=text]{
-        font-size: 10px !important;
-        margin: 11px 0 !important;
-        width: 120px !important;
-        z-index: 100;
-    }
-    .shop{
-        margin-left: auto;
-        padding-top: 14px;
-        font-size: 0;
-        width: 60px;
-    }
-    .shop > a > i{
-        font-size: 15px !important;
-    }
-    .avdHead{
-        width: 0%;
-        display: block;
-        z-index: 0; 
-    }
-    .img > div.carousel{
-        width: 100%;
-    }
-    .img > div.carousel  img{
-        width: 100%;
-    }
-    .sharing > li:nth-child(1) {
-        top: 150px;
-    }
-    .sharing > li:nth-child(2) {
-        top: 200px;
-    }
-    .sharing > li:nth-child(3) {
-        top: 250px;
-    }
-    .main > p{
-        font-size: 25px;
-    }
-    .option > span{
-        font-size: 15px !important;
-    }
-    .option > ul > li:first-child{
-        margin-left: -29px;
-    }
-    .option > ul > li {
-        width: 120px;
-        font-size: 12px;
-    }
-    .phoneType > ul > li:first-child {
-        margin-left: 80px;/**/
-    }
-    .phoneType > ul > li {
-        width: 70px;
-        font-size: 12px;
-    }
-    .footer >div:last-child{
-        margin-right: 15px;
-    }
-    section.sub > div {
-        width: 33.1%;
-    }
-    section.sub > div > a > h4 {
-        font-size: 16px;
-        font-weight: 600;
-    }
-    section.sub > div > a > p {
-        font-size: 14px;
-    }
-    #back-to-top{
-        left: 90%;
-        top: 80%;
-    }
-    .footer > div > p{
-        font-size: 14px;
-        font-weight: 600;
-    }
-    .footer > div > span{
-        font-size: 13px;
-    }
-    .footer > div > span > span{
-        font-size: 16px !important;
-    }
-    .footer > div:first-child > span >span:last-child{
-        font-size: 13px !important;
-    }
-}
 
-@media only screen and (min-width: 490px) and (max-width:600px){
-    body > div:first-child{
-        height: 30px !important;
-    }
-    .main{
-        width: 100%;
-    }
-    nav .fa{
-        font-size: 18px !important;
-    }
-    .logo{
-        width: 0;
-    }
-    nav  ul > li > a{
-        width: 100px;
-        font-size: 10px;
-        padding: 13px 15px;
-    }
-    nav > ul > li > a > img  {
-        width: 0;
-    }
-    nav > ul > li:first-child {
-        width: 20px;
-        background-image: linear-gradient(rgb(8, 105, 8),rgb(1, 27, 1));
-    }
-    nav > ul > li select{
-        font-size: 10px !important;
-        margin: 11px 0 !important;
-        width: 0;
-        display: none;
-    }
-    nav > ul > li input[type=text]{
-        font-size: 10px !important;
-        margin: 11px 0 !important;
-        width: 120px !important;
-    }
-    .shop{
-        margin-left: auto;
-        padding-top: 14px;
-        font-size: 0;
-        width: 60px;
-    }
-    .shop > a > i{
-        font-size: 15px !important;
-    }
-    .avdHead{
-        width: 0%;
-        display: block;
-        z-index: 0; 
-    }
-    .img > div.carousel{
-        width: 100%;
-    }
-    .img > div.carousel  img{
-        width: 100%;
-    }
-    .sharing > li:nth-child(1) {
-        top: 150px;
-    }
-    .sharing > li:nth-child(2) {
-        top: 200px;
-    }
-    .sharing > li:nth-child(3) {
-        top: 250px;
-    }
-    .main > p{
-        font-size: 25px;
-    }
-    .sharing > li{
-        left: -200px;
-    }
-    .option > span{
-        font-size: 11px !important;
-    }
-    .option > ul > li:first-child{
-        margin-left: -29px;
-    }
-    .option > ul > li {
-        width: 95px;
-        font-size: 10px;
-    }
-    .phoneType > ul > li:first-child {
-        margin-left: 58px;
-    }
-    .phoneType > ul > li {
-        width: 60px;
-        font-size: 10px;
-    }
-    .footer >div:last-child{
-        margin-right: 15px;
-    }
-    section.sub > div {
-        width: 49.7%;
-    }
     section.sub > div > a > h4 {
-        font-size: 16px;
-        font-weight: 600;
+        font-size: 20px !important;
     }
-    section.sub > div > a > p {
-        font-size: 14px;
-    }
-    #back-to-top{
-        left: 90%;
-        top: 80%;
-    }
-    .footer > div{
-        padding-left: 15px !important;
-    }
-    .footer > div > p{
-        font-size: 14px;
-        font-weight: 600;
-    }
-    .footer > div > span{
-        font-size: 13px;
-    }
-    .footer > div > span > span{
-        font-size: 16px !important;
-    }
-    .footer > div:first-child > span >span:last-child{
-        font-size: 13px !important;
-    }
-}
 
-@media only screen and (min-width: 300px) and (max-width:489px){
-    body > div:first-child{
-        height: 30px !important;
-    }
-    .main{
-        width: 100%;
-    }
-    nav .fa{
-        font-size: 10px !important;
-    }
-    .logo{
-        width: 0;
-    }
-    nav  ul > li > a{
-        width: 80px;
-        font-size: 8px;
-        padding: 13px 15px;
-    }
-    nav > ul > li > a > img  {
-        width: 0;
-    }
-    nav > ul > li:first-child {
-        width: 20px;
-        background-image: linear-gradient(rgb(8, 105, 8),rgb(1, 27, 1));
-    }
-    nav > ul > li select{
-        font-size: 10px !important;
-        margin: 8px 0 !important;
-        width: 0;
-        display: none;
-    }
-    nav > ul > li input[type=text]{
-        font-size: 9px !important;
-        margin: 8px 0 !important;
-        width: 120px !important;
-        height: 20px !important;
-    }
-    .shop{
-        margin-left: auto;
-        padding-top: 14px;
-        font-size: 0;
-        width: 60px;
-    }
-    .shop > a > i{
-        font-size: 15px !important;
-    }
-    .avdHead{
-        width: 0%;
-        display: block;
-        z-index: 0; 
-    }
-    .img > div.carousel{
-        width: 100%;
-    }
-    .img > div.carousel  img{
-        width: 100%;
-    }
-    .sharing > li:nth-child(1) {
-        top: 150px;
-    }
-    .sharing > li:nth-child(2) {
-        top: 200px;
-    }
-    .sharing > li:nth-child(3) {
-        top: 250px;
-    }
-    .main > p{
-        font-size: 20px;
-    }
-    .sharing > li{
-        left: -200px;
-    }
-    .option > span{
-        font-size: 11px !important;
-    }
-    .option > ul > li:first-child{
-        margin-left: -45px;
-    }
-    .option > ul > li {
-        width: 95px;
-        font-size: 10px;
-    }
-    .phoneType > ul > li:first-child {
-        margin-left: -10px;
-    }
-    .phoneType > ul > li {
-        width: 60px;
-        font-size: 10px;
-    }
-    .footer >div:last-child{
-        margin-right: 15px;
-    }
-    section.sub > div {
-        width: 49.7%;
-    }
-    section.sub > div > a > h4 {
-        font-size: 16px;
-        font-weight: 600;
-    }
     section.sub > div > a > p {
-        font-size: 14px;
+        font-size: 19px;
     }
-    #back-to-top{
-        left: 90%;
-        top: 80%;
-    }
-    .footer > div{
-        padding-left: 10px ;
-    }
-    .footer-sub > h5{
+    section.sub > div > a > p > span {
+        display: block;
         font-size: 15px;
     }
-    .footer-sub > p{
+    .avdHead{
+        width: 0%;
+    }
+    #head1{
+        display: none;
+    }
+    .sharing  > li{
+        display: none;
+    }
+    .accLaptop{
+        height: 40px;
+    }
+
+    #back-to-top{
+        top: 75%;
+        left: 94%;
+    }
+    .emailF{
+        margin-left: 193px !important;
+        font-size: 13px;
+    }
+    footer {
+        background-image: linear-gradient(rgb(158, 51, 19), rgb(255, 60, 0));
+        height:  335px;
+    }
+
+    .footer > div:last-child{
+        margin-right: 10px;
+    }
+
+    .footerImg{
+        margin-top: 25px !important;
+    }
+    .footer > div > p {
+        font-size: 15px;
+    }
+    .footer > div {
+        padding-left: 25px;
+    }
+    .footer > div > span {
+        font-size: 15px;
+    }
+
+    .footer > div > span span:first-child {
+        color: rgb(34, 31, 31) !important;
+    }
+    .footerGame img{
+        height: 400px;
+    }
+}
+
+
+@media only screen and (min-width: 550px) and (max-width:700px){
+    .main{
+        width: 99%;
+    }
+
+    .main > p{
+        font-size: 25px;
+    }
+    .img > div:first-child img{
+        height: 250px;
+    }
+     
+    nav > ul{
+        display: none;
+    }
+
+    div.mobile{
+        opacity: 1;
+        z-index: 1000;
+    }
+    
+    div.mobile >div:first-child {
+        padding-top: 0.9%;
+    }
+
+    #mMenu{
+        left: -800px;
+    }
+
+    .manuPhone{
+        display: block;
+    }
+
+    .manuPhone > ul > li:first-child{
+        margin-left: -15px;
+    }
+
+    .option > span{
+        font-size: 15px !important;
+    }
+
+    .option > ul > li{
+        width: 112px;
+        margin: 1px;
+    }
+    .phoneType{
+        display: none;
+    }
+
+    .img > div:first-child{
+        width: 100%;
+    }
+
+    .option > ul{
+        margin-left: -35px;
+    }
+
+    .phoneType > ul > li:first-child {
+        margin-left: 100px;
+    }
+
+    section.sub > div{
+        width: 49.8%;
+        text-align: left;
+    }
+
+    section.sub > div > a > h4 {
+        font-size: 20px !important;
+    }
+
+    section.sub > div > a > p {
+        font-size: 19px;
+    }
+    section.sub > div > a > p > span {
+        display: block;
+        font-size: 15px;
+    }
+    .avdHead{
+        width: 0%;
+    }
+    #head1{
+        display: none;
+    }
+    .sharing  > li{
+        display: none;
+    }
+    .accLaptop{
+        height: 40px;
+    }
+
+    #back-to-top{
+        top: 75%;
+        left: 92%;
+    }
+    .emailF{
+        margin-left: 120px !important;
+        font-size: 13px;
+    }
+
+    footer {
+        background-image: linear-gradient(rgb(158, 51, 19), rgb(255, 60, 0));
+        height: 335px;
+    }
+
+    .footer > div:last-child{
+        margin-right: 10px;
+    }
+
+    .footerImg{
+        margin-top: 25px !important;
+    }
+    .footer > div > p {
+        font-size: 15px;
+    }
+    .footer > div {
+        padding-left: 10px;
+    }
+    .footer > div > span {
+        font-size: 13px;
+    }
+
+    .footer > div > span span:first-child {
+        color: rgb(34, 31, 31) !important;
+    }
+    .footerGame img{
+        height: 350px;
+    }
+}
+
+
+@media only screen and (min-width: 465px) and (max-width:550px){
+    .main{
+        width: 99%;
+    }
+
+    .main > p{
+        font-size: 25px;
+    }
+
+    .img > div:first-child{
+        width: 100%;
+    }
+    .img > div:first-child img{
+        height: 200px;
+    }
+     
+    nav > ul{
+        display: none;
+    }
+
+    div.mobile{
+        opacity: 1;
+        z-index: 1000;
+        font-size: 13px;
+    }
+    
+    div.mobile >div:first-child {
+        padding-top: 7px;
+        width: 28% !important;
+    }
+
+    div.mobile > div:nth-child(2) input{
+        height: 35px !important;
+    }
+    div.mobile > div:nth-child(2){
+        padding-top: 4px;
+    }
+    div.mobile > div:nth-child(2) i{
+        height: 35px !important;
+        font-size: 20px; 
+        width: 55px;
+        padding-top: 7px;
+    }
+    div.mobile > div:nth-child(3) {
+        margin-left: 9%;
+        font-size: 30px;
+    }
+
+    div.mobile > div:nth-child(4) {
+        font-size: 30px;
+    }
+    #mMenu{
+        left: -800px;
+    }
+
+    .manuPhone{
+        display: block;
+    }
+
+    .manuPhone > ul > li:first-child{
+        margin-left: -15px;
+    }
+
+    .option > span{
+        font-size: 15px !important;
+    }
+
+    .option > ul > li{
+        width: 112px;
+        margin: 1px;
+    }
+    .phoneType{
+        display: none;
+    }
+
+    .option > ul{
+        margin-left: -35px;
+    }
+
+    .phoneType > ul > li:first-child {
+        margin-left: 100px;
+    }
+
+    section.sub > div{
+        width: 49.8%;
+        text-align: left;
+    }
+
+    section.sub > div > a > h4 {
+        font-size: 15px !important;
+    }
+
+    section.sub > div > a > p {
+        font-size: 15px;
+    }
+    section.sub > div > a > p > span {
+        display: block;
+        font-size: 13px;
+    }
+    .avdHead{
+        width: 0%;
+    }
+    #head1{
+        display: none;
+    }
+    .sharing  > li{
+        display: none;
+    }
+    
+    .accLaptop {
+        height: 30px;
+    }
+
+    #back-to-top{
+        top: 80%;
+        left: 92%;
+    }
+    .emailF{
+        margin-left: 15% !important;
+        font-size: 13px;
+    }
+
+    .h5, h5 {
+        font-size: 17px !important;
+    }
+
+    .footer-sub input[type=text] {
+        font-size: 13px;
+        width: 60%;
+    }
+    .footer-sub input[type=button] {
+        font-size: 13px;
+        width: 90px;
+    }
+    footer {
+        display: none !important;
+    }
+    .footerGame img{
+        width: 100%;
+        height: 250px;
+    }
+    
+    .footerMobile{
+        display: block;
+    }
+}
+
+
+@media only screen and (min-width: 380px) and (max-width:464px){
+    .main{
+        width: 99.5%;
+    }
+
+    .main > p{
+        font-size: 21px;
+        margin-left: 10px;
+    }
+
+    .img > div:first-child{
+        width: 100%;
+    }
+    .img > div:first-child img{
+        height: 170px;
+    }
+     
+    nav > ul{
+        display: none;
+    }
+
+    div.mobile{
+        opacity: 1;
+        z-index: 1000;
+        font-size: 13px;
+    }
+    
+    div.mobile >div:first-child {
+        padding-top: 10px;
+        width: 28% !important;
+    }
+
+    div.mobile > div:nth-child(2) input{
+        height: 35px !important;
+    }
+    div.mobile > div:nth-child(2){
+        padding-top: 4px;
+    }
+    div.mobile > div:nth-child(2) i{
+        height: 35px !important;
+        font-size: 20px; 
+        width: 55px;
+        padding-top: 7px;
+    }
+    div.mobile > div:nth-child(3) {
+        margin-left: 9%;
+        font-size: 30px;
+    }
+
+    div.mobile > div:nth-child(4) {
+        font-size: 30px;
+    }
+    #mMenu{
+        left: -800px;
+    }
+
+    .mAcc a,.mPhone a, .mLaptop a{
+        font-size: 18px;
+    }
+    .mAcc i,.mPhone i, .mLaptop i{
+        font-size: 25px !important;
+    }
+    .manuPhone{
+        display: block;
+    }
+
+    .manuPhone > ul > li:first-child{
+        margin-left: -35px;
+    }
+    #mShowLaptopMenu{
+        margin-left: 45px !important;
+    }
+    #mShowAccMenu{
+        margin-left: 25px !important;
+    }
+    #GG{
+        font-size: 12px;
+    }
+    .option > span {
+        font-size: 13px !important;
+    }
+
+    .option > ul > li{
+        width: 112px;
+        margin: 1px;
+    }
+    .phoneType{
+        display: none;
+    }
+
+    .option > ul{   
+        margin-top: 35px;
+        margin-left: -114px;
+    }
+
+    .phoneType > ul > li:first-child {
+        margin-left: 100px;
+    }
+
+    section.sub > div{
+        width: 49.8%;
+        text-align: left;
+    }
+
+    section.sub > div > a > h4 {
+        font-size: 15px !important;
+    }
+
+    section.sub > div > a > p {
+        font-size: 15px;
+    }
+    section.sub > div > a > p > span {
+        display: block;
+        font-size: 13px;
+    }
+    .avdHead{
+        width: 0%;
+    }
+    #head1{
+        display: none;
+    }
+    .sharing  > li{
+        display: none;
+    }
+    
+    .accLaptop {
+        height: 30px;
+    }
+
+    #back-to-top{
+        top: 80%;
+        left: 88%;
+    }
+    .emailF{
+        margin-left: 15% !important;
+        font-size: 13px;
+    }
+
+    .h5, h5 {
+        font-size: 17px !important;
+    }
+
+    .footer-sub input[type=text] {
+        font-size: 13px;
+        width: 60%;
+    }
+    .footer-sub input[type=button] {
+        font-size: 13px;
+        width: 90px;
+    }
+    .footer-sub p {
+        font-size: 11px;
+    }
+    footer {
+        display: none !important;
+    }
+    .footerGame img{
+        width: 100%;
+        height: 190px;
+    }
+    
+    .footerMobile{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 314px) and (max-width:379px){
+    .main{
+        width: 99.5%;
+    }
+
+    .main > p{
+        font-size: 21px;
+        margin-left: 10px;
+    }
+
+    .img > div:first-child{
+        width: 100%;
+    }
+    .img > div:first-child img{
+        height: 170px;
+    }
+     
+    nav > ul{
+        display: none;
+    }
+
+    div.mobile{
+        opacity: 1;
+        z-index: 1000;
+        font-size: 13px;
+    }
+    
+    div.mobile >div:first-child {
+        padding-top: 10px;
+        width: 28% !important;
+    }
+
+    div.mobile > div:nth-child(2) input{
+        height: 35px !important;
+    }
+    div.mobile > div:nth-child(2){
+        padding-top: 4px;
+    }
+    div.mobile > div:nth-child(2) i{
+        height: 35px !important;
+        font-size: 20px; 
+        width: 55px;
+        padding-top: 7px;
+    }
+    div.mobile > div:nth-child(3) {
+        margin-left: 9%;
+        font-size: 30px;
+    }
+
+    div.mobile > div:nth-child(3) i{
+        font-size: 23px;
+    }
+    div.mobile > div:nth-child(4) {
+        font-size: 30px;
+    }
+    div.mobile > div:nth-child(4) i{
+        font-size: 23px;
+    }
+    #mMenu{
+        left: -800px;
+    }
+
+    .mAcc a,.mPhone a, .mLaptop a{
+        font-size: 18px;
+    }
+    .mAcc i,.mPhone i, .mLaptop i{
+        font-size: 25px !important;
+    }
+    .manuPhone{
+        display: block;
+    }
+
+    .manuPhone > ul > li:first-child{
+        margin-left: -35px;
+    }
+    #mShowLaptopMenu{
+        margin-left: 45px !important;
+    }
+    #mShowAccMenu{
+        margin-left: 25px !important;
+    }
+    #GG{
+        font-size: 12px;
+    }
+    .option > span {
+        font-size: 13px !important;
+    }
+
+    .option > ul > li{
+        width: 95px;
+        margin: 1px;
+        font-size: 11px;
+    }
+    .phoneType{
+        display: none;
+    }
+
+    .option > ul{   
+        margin-top: 35px;
+        margin-left: -130px;
+    }
+
+    .phoneType > ul > li:first-child {
+        margin-left: 100px;
+    }
+
+    section.sub > div{
+        width: 49.8%;
+        text-align: left;
+    }
+
+    section.sub > div > a > h4 {
+        font-size: 15px !important;
+    }
+
+    section.sub > div > a > p {
+        font-size: 15px;
+    }
+    section.sub > div > a > p > span {
+        display: block;
+        font-size: 13px;
+    }
+    .avdHead{
+        width: 0%;
+    }
+    #head1{
+        display: none;
+    }
+    .sharing  > li{
+        display: none;
+    }
+    
+    .accLaptop {
+        height: 20px;
+    }
+
+    #back-to-top{
+        top: 80%;
+        left: 88%;
+    }
+    .emailF{
+        margin-left: 15% !important;
+        font-size: 13px;
+    }
+
+    .h5, h5 {
+        font-size: 17px !important;
+    }
+
+    .footer-sub input[type=text] {
+        font-size: 13px;
+        width: 60%;
+    }
+    .footer-sub input[type=button] {
+        font-size: 13px;
+        width: 90px;
+    }
+    .footer-sub p {
+        font-size: 11px;
+    }
+    footer {
+        display: none !important;
+    }
+    .footerGame img{
+        width: 100%;
+        height: 175px;
+    }
+    
+    .footerMobile{
+        display: block;
+    }
+}
+@media only screen and (min-width: 200px) and (max-width:313px){
+    .main{
+        width: 99.5%;
+    }
+
+    .main > p{
+        font-size: 21px;
+        margin-left: 10px;
+    }
+
+    .img > div:first-child{
+        width: 100%;
+    }
+    .img > div:first-child img{
+        height: 145px;
+    }
+     
+    nav > ul{
+        display: none;
+    }
+
+    div.mobile{
+        opacity: 1;
+        z-index: 1000;
+        font-size: 13px;
+    }
+    
+    div.mobile >div:first-child {
+        padding-top: 10px;
+        width: 28% !important;
+    }
+
+    div.mobile > div:nth-child(2) input{
+        height: 35px !important;
+    }
+    div.mobile > div:nth-child(2){
+        padding-top: 4px;
+    }
+    div.mobile > div:nth-child(2) i{
+        height: 35px !important;
+        font-size: 20px; 
+        width: 55px;
+        padding-top: 7px;
+    }
+    div.mobile > div:nth-child(3) {
+        margin-left: 9%;
+        font-size: 30px;
+    }
+
+    div.mobile > div:nth-child(3) i{
+        font-size: 23px;
+    }
+    div.mobile > div:nth-child(4) {
+        font-size: 30px;
+    }
+    div.mobile > div:nth-child(4) i{
+       font-size: 23px;
+    }
+    .spec-note{
+        font-size: 11px;
+    }
+    #mMenu{
+        left: -800px;
+    }
+
+    .mAcc a,.mPhone a, .mLaptop a{
+        font-size: 18px;
+    }
+    .mAcc i,.mPhone i, .mLaptop i{
+        font-size: 25px !important;
+    }
+    .manuPhone{
+        display: block;
+    }
+
+    .manuPhone > ul > li:first-child{
+        margin-left: -35px;
+    }
+    #mShowLaptopMenu{
+        margin-left: 45px !important;
+    }
+    #mShowAccMenu{
+        margin-left: 25px !important;
+    }
+    #GG{
+        font-size: 12px;
+    }
+    .option > span {
+        font-size: 11px !important;
+    }
+
+    .option > ul > li{
+        width: 94px;
+        margin: 1px;
         font-size: 10px;
     }
-    .footer-sub > input[type=text]{
-        width: 215px;
+    .phoneType{
+        display: none;
+    }
+
+    .option > ul{   
+        margin-top: 48px;
+        margin-left: -130px;
+    }
+
+    .phoneType > ul > li:first-child {
+        margin-left: 100px;
+    }
+
+    section.sub > div{
+        width: 49.8%;
+        text-align: left;
+    }
+
+    section.sub > div > a > h4 {
+        font-size: 15px !important;
+    }
+
+    section.sub > div > a > p {
+        font-size: 15px;
+    }
+    section.sub > div > a > p > span {
+        display: block;
         font-size: 13px;
     }
-    .footer-sub > input[type=button]{
-        width: 75px;
+    .avdHead{
+        width: 0%;
+    }
+    #head1{
+        display: none;
+    }
+    .sharing  > li{
+        display: none;
+    }
+    
+    .accLaptop {
+        height: 20px;
+    }
+
+    #back-to-top{
+        top: 80%;
+        left: 88%;
+    }
+    .emailF{
+        margin-left: 15% !important;
         font-size: 13px;
     }
-    .footer > div > p{
-        font-size: 12px;
-        font-weight: 500;
+
+    .h5, h5 {
+        font-size: 17px !important;
     }
-    .footer > div > span{
-        font-size: 9px;
+
+    .footer-sub input[type=text] {
+        font-size: 13px;
+        width: 60%;
     }
-    .footer > div > img:first-child{
-        width: 90%;
+    .footer-sub input[type=button] {
+        font-size: 13px;
+        width: 90px;
     }
-    .footer > div > span > span{
-        font-size: 16px !important;
+    .footer-sub p {
+        font-size: 11px;
     }
-    .footer > div:first-child > span >span:last-child{
-        font-size: 13px !important;
+    footer {
+        display: none !important;
+    }
+    .footerGame img{
+        width: 100%;
+        height: 175px;
+    }
+    
+    .footerMobile{
+        display: block;
     }
 }
