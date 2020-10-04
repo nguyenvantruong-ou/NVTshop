@@ -142,7 +142,12 @@ div.img{
 .img .carousel-control-next:hover{
     background-color: rgb(46, 45, 45);
 }
-
+#demo .carousel-indicators li {
+    width: 7px !important;
+    height: 5px !important;
+    border-radius: 50%;
+    background-color: #343a40;
+}
 .avdHead{
     width: 40%;
     margin-left: 5px;
@@ -678,7 +683,7 @@ div.mobile > div:nth-child(4){
      color: #545557;
      text-align: center;
  }
-.carousel-indicators li {
+#demo1 .carousel-indicators li {
     width: 7px !important;
     height: 5px !important;
     border-radius: 50%;
@@ -1297,7 +1302,7 @@ div.mobile > div:nth-child(4){
 }
 
 
-@media only screen and (min-width: 380px) and (max-width:464px){
+@media only screen and (min-width: 374px) and (max-width:464px){
     .main{
         width: 99.5%;
     }
@@ -1354,6 +1359,9 @@ div.mobile > div:nth-child(4){
         left: -800px;
     }
 
+    #hideMenu{
+        width: 15%;
+    }
     .mAcc a,.mPhone a, .mLaptop a{
         font-size: 18px;
     }
@@ -1464,7 +1472,7 @@ div.mobile > div:nth-child(4){
     }
 }
 
-@media only screen and (min-width: 314px) and (max-width:379px){
+@media only screen and (min-width: 314px) and (max-width:373px){
     .main{
         width: 99.5%;
     }
@@ -1527,6 +1535,12 @@ div.mobile > div:nth-child(4){
         left: -800px;
     }
 
+    #mMenu >div:first-child > div:first-child{
+        width: 40% !important;
+    }
+    #hideMenu{
+        width: 15%;
+    }
     .mAcc a,.mPhone a, .mLaptop a{
         font-size: 18px;
     }
@@ -1614,6 +1628,9 @@ div.mobile > div:nth-child(4){
         font-size: 17px !important;
     }
 
+    .footer-sub > h5{
+        font-size: 19px !important;
+    }
     .footer-sub input[type=text] {
         font-size: 13px;
         width: 60%;
@@ -1703,6 +1720,12 @@ div.mobile > div:nth-child(4){
         left: -800px;
     }
 
+    #mMenu >div:first-child > div:first-child{
+        width: 40% !important;
+    }
+    #hideMenu{
+        width: 15%;
+    }
     .mAcc a,.mPhone a, .mLaptop a{
         font-size: 18px;
     }
@@ -1790,6 +1813,9 @@ div.mobile > div:nth-child(4){
         font-size: 17px !important;
     }
 
+    .footer-sub > h5{
+        font-size: 19px !important;
+    }
     .footer-sub input[type=text] {
         font-size: 13px;
         width: 60%;

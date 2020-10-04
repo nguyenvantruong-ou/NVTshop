@@ -438,7 +438,7 @@ function checkEmail(){
      
     }
     /* kiểm tra cuối emal có phải la .vn hoạc .com không */
-    if (flag =1)
+    if (flag ==1)
     {
         var lastVn = cE.lastIndexOf('.vn')
         var lastCom= cE.lastIndexOf('.com')
