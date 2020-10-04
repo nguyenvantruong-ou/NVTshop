@@ -443,7 +443,7 @@ div.mobile{
     background-image: linear-gradient(#f6412e,#fe6433);
     display: flex;
     opacity: 0;
-    z-index: -1;
+    height: 0;
 }
 
 div.mobile >div:first-child{
@@ -844,6 +844,7 @@ div.mobile > div:nth-child(4){
     div.mobile{
         opacity: 1;
         z-index: 1000;
+        height: auto;
     }
 
     #mMenu{
@@ -917,6 +918,7 @@ div.mobile > div:nth-child(4){
     div.mobile{
         opacity: 1;
         z-index: 1000;
+        height: auto;
     }
     
     div.mobile >div:first-child {
@@ -1034,6 +1036,7 @@ div.mobile > div:nth-child(4){
     div.mobile{
         opacity: 1;
         z-index: 1000;
+        height: auto;
     }
     
     div.mobile >div:first-child {
@@ -1168,6 +1171,7 @@ div.mobile > div:nth-child(4){
     div.mobile{
         opacity: 1;
         z-index: 1000;
+        height: auto;
         font-size: 13px;
     }
     
@@ -1317,6 +1321,7 @@ div.mobile > div:nth-child(4){
     div.mobile{
         opacity: 1;
         z-index: 1000;
+        height: auto;
         font-size: 13px;
     }
     
@@ -1483,6 +1488,7 @@ div.mobile > div:nth-child(4){
     div.mobile{
         opacity: 1;
         z-index: 1000;
+        height: auto;
         font-size: 13px;
     }
     
@@ -1655,6 +1661,7 @@ div.mobile > div:nth-child(4){
     div.mobile{
         opacity: 1;
         z-index: 1000;
+        height: auto;
         font-size: 13px;
     }
     
